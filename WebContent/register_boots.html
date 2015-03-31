@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<form class="form-horizontal" action="register" method="post">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Form Name</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">User name</label>
+				<div class="col-md-4">
+					<input id="username" name="username" type="text"
+						placeholder="placeholder" class="form-control input-md">
+				</div>
+			</div>
+
+			<!-- Password input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="passwordinput">Password</label>
+				<div class="col-md-4">
+					<input id="password" name="password" type="password"
+						placeholder="placeholder" class="form-control input-md"> 
+				</div>
+			</div>
+
+
+            <!-- Password input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="passwordinput">Password Confirm</label>
+				<div class="col-md-4">
+					<input id="passwordcfm" name="passwordcfm" type="password"
+						placeholder="placeholder" class="form-control input-md">
+				</div>
+			</div>
+
+
+ 			<!-- Select Basic -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="selectbasic">Select Basic</label>
+				<div class="col-md-4">
+					<select id="gender" name="gender" class="form-control">
+						<option value="1">Female</option>
+						<option value="2">Male</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Multiple Radios (inline) -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="radios"> Which year are you in: </label>
+				<div class="col-md-4">
+					<label class="radio-inline" for="radios-0"> 
+						<input type="radio" name="year" id="radios-0" value="1" checked="checked"> Year 1
+					</label> 
+					<label class="radio-inline" for="radios-1"> 
+						<input type="radio" name="year" id="radios-1" value="2"> Year 2
+					</label> 
+					<label class="radio-inline" for="radios-2"> 
+						<input type="radio" name="year" id="radios-2" value="3"> Year 3
+					</label> 
+					<label class="radio-inline" for="radios-3"> 
+						<input type="radio" name="year" id="radios-3" value="4"> Year 4
+					</label>
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="singlebutton">Single
+					Button</label>
+				<div class="col-md-4">
+					<button id="singlebutton" name="singlebutton"
+						class="btn btn-primary">Button</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+
+
+</body>
+</html>
