@@ -1,4 +1,4 @@
-package ecle3610.servlet;
+package elec3610.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
