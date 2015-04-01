@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	
-	
 	$("#submitbutton").bind("click",function(){
 		
 		var password = $("#password").val();

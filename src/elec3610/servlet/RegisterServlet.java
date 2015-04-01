@@ -1,10 +1,8 @@
 package elec3610.servlet;
 
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
@@ -38,15 +36,11 @@ public class RegisterServlet extends HttpServlet {
 		
 		// add the data to the server
 		try {
-			PrintWriter out = response.getWriter();
 			Class.forName("com.mysql.jdbc.Driver");
 			String mysqlUrl = "jdbc:mysql://localhost:3306/elec3610";
-
 			Properties userInfo = new Properties();
 			userInfo.put("user", "root");
 			userInfo.put("password", "root");
-			
-			
 			Connection connection = DriverManager.getConnection(mysqlUrl,userInfo);
 			Statement stmt = connection.createStatement();
 			String sql = "INSERT INTO user VALUES (null, '"+username+"', '"+password+"', "+gender+", "+year+")";
@@ -55,6 +49,7 @@ public class RegisterServlet extends HttpServlet {
 	        System.out.println("Inserted records into the table...");
 		       
 	        // response to the client
+	        PrintWriter out = response.getWriter();
 	        response.setContentType("text;html;charset=utf-8");
 	        out = response.getWriter();
 			out.print("this is the response from the server");
