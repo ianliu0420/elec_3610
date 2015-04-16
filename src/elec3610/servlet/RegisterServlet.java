@@ -17,8 +17,6 @@ public class RegisterServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException {
 		
-		System.out.println("calling the do get method");
-		
 		String username = request.getParameter("username");
 		System.out.println("username=" + username);
 		
@@ -45,14 +43,12 @@ public class RegisterServlet extends HttpServlet {
 			Statement stmt = connection.createStatement();
 			String sql = "INSERT INTO user VALUES (null, '"+username+"', '"+password+"', "+gender+", "+year+")";
 	        stmt.executeUpdate(sql);
-			
-	        System.out.println("Inserted records into the table...");
 		       
 	        // response to the client
 	        PrintWriter out = response.getWriter();
 	        response.setContentType("text;html;charset=utf-8");
 	        out = response.getWriter();
-			out.print("this is the response from the server");
+			out.print("You have inserted a new user");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -63,7 +59,6 @@ public class RegisterServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException {
-		System.out.println("calling the do post method");
 		doGet(request, response);
 	}
 
